@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="76a6992f-72eb-4dce-9c29-b23c3117bb83" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/wiggin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wiggin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/constants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Invoices.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Invoices.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Supplier.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Supplier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Auth_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Auth_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Customer_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Customer_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Invoices_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Invoices_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/dashboard.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/earnings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/earningsorg.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/expenses/save.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/expenses/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/exportDb.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/qrcode.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/settings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/categories/edit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/categories/save.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/categories/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/categories12-21-2020/categories/edit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/categories12-21-2020/categories/save.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/categories12-21-2020/categories/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/categories12-21-2020/edit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/categories12-21-2020/save.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/categories12-21-2020/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/customers/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/dishes/save.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/dishes/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/khanakhilao_email_template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/online-orders/order_details.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/online-orders/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/online-orders/views.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/orders/save.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/orders/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/tables/view-org.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/tables/view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/users/edit-user.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/users/users.php" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/mikey179/vfsstream" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1o0Z3JLXjGXzHqilAdQT93HYnGV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76a6992f-72eb-4dce-9c29-b23c3117bb83" name="Default Changelist" comment="" />
+      <created>1612425268022</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612425268022</updated>
+      <workItem from="1612425269146" duration="18341000" />
+      <workItem from="1612849282157" duration="5980000" />
+      <workItem from="1612936454580" duration="12050000" />
+      <workItem from="1613214092778" duration="1791000" />
+      <workItem from="1613415388891" duration="584000" />
+      <workItem from="1613455655669" duration="1577000" />
+      <workItem from="1613457949720" duration="660000" />
+      <workItem from="1613460116081" duration="2116000" />
+      <workItem from="1613465876395" duration="1780000" />
+      <workItem from="1613467696687" duration="1817000" />
+      <workItem from="1613552650676" duration="650000" />
+      <workItem from="1613630911992" duration="284000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
