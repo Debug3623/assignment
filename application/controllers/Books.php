@@ -102,7 +102,7 @@ class Books extends CI_Controller
 
    
         if (!empty($categories)) {
-                $this->api->successResponseWithData('All categories', $categories);
+                $this->api->successResponseWithData('All Books', $categories);
         } else {  
              $this->api->print_error('Category is not exist', $categories);
 

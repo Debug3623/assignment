@@ -1,0 +1,270 @@
+1) Signup Api:
+
+{
+    "status": 200,
+    "message": "Registration Successfully",
+    "data": {
+        "id": "15",
+        "fname": "testing for assignment",
+        "lname": "assignment",
+        "dob": "9-12-1998",
+        "address": "Abu dubai",
+        "image": "http://localhost/task_assignment/uploads/4840543416291.jpg",
+        "accessToken": "OEKyxACnjxKLJcf17tD8L4TJk0uegIIzTGCWQy9p0UeXKTyZkGsxqlAGIHIAzIaXknl7nr9YEQap3cnJ",
+        "created_at": "2022-09-24 07:06:39"
+    }
+}
+
+2)Add cayegory Api:
+{
+    "status": 200,
+    "message": "Category Successfully added."
+}
+
+3)Allcayegories Api:
+{
+    "status": 200,
+    "message": "All Category",
+    "data": [
+        {
+            "id": "1",
+            "title": "hellofdd",
+            "image": "http://localhost/task_assignment/uploads/4397850862962.PNG",
+            "created_at": "2022-09-23 23:35:34",
+            "created_by": "4"
+        },
+        {
+            "id": "2",
+            "title": "new category",
+            "image": "http://localhost/task_assignment/uploads/2304611793090.PNG",
+            "created_at": "2022-09-24 04:33:54",
+            "created_by": "6"
+        },
+        {
+            "id": "3",
+            "title": "new categorys",
+            "image": "http://localhost/task_assignment/uploads/5223253020812.PNG",
+            "created_at": "2022-09-24 06:25:08",
+            "created_by": "6"
+        },
+        {
+            "id": "4",
+            "title": "test category",
+            "image": "http://localhost/task_assignment/uploads/2332912451820.PNG",
+            "created_at": "2022-09-24 07:08:30",
+            "created_by": "15"
+        }
+    ]
+}
+
+4)AddBooks Api:
+
+{
+    "status": 200,
+    "message": "Book Successfully added.",
+    "data": {
+        "id": "22",
+        "title": "Book new add",
+        "description": "book added successfully",
+        "user_id": "15",
+        "category_id": "3",
+        "image": "http://localhost/task_assignment/uploads/3689063754888.jpg"
+    }
+}
+
+
+5)getSingleBooks Api:
+{
+    "status": 200,
+    "message": "Book detail",
+    "data": {
+        "id": "22",
+        "title": "Book new add",
+        "category_id": "3",
+        "user_id": "15",
+        "image": "http://localhost/task_assignment/uploads/3689063754888.jpg",
+        "created_at": "2022-09-24 07:11:04"
+    }
+}
+
+6)getAllBooks Api:
+{
+    "status": 200,
+    "message": "All Books",
+    "data": [
+        {
+            "id": "1",
+            "title": "Auther",
+            "image": "http://localhost/task_assignment/uploads/",
+            "created_at": "2022-09-24 04:21:51"
+        },
+        {
+            "id": "2",
+            "title": "Authers",
+            "image": "http://localhost/task_assignment/uploads/",
+            "created_at": "2022-09-23 23:51:05"
+        },
+        {
+            "id": "3",
+            "title": "Autherss",
+            "image": "http://localhost/task_assignment/uploads/519156468168.jpg",
+            "created_at": "2022-09-23 23:57:19"
+        },
+        {
+            "id": "4",
+            "title": "Autherssd",
+            "image": "http://localhost/task_assignment/uploads/1515870611850.jpg",
+            "created_at": "2022-09-24 00:02:30"
+        },
+        {
+            "id": "5",
+            "title": "Autherssdd",
+            "image": "http://localhost/task_assignment/uploads/1049961065674.jpg",
+            "created_at": "2022-09-24 00:07:34"
+        },
+        {
+            "id": "6",
+            "title": "Autherssddddd",
+            "image": "http://localhost/task_assignment/uploads/1552478166621.jpg",
+            "created_at": "2022-09-24 00:08:57"
+        },
+        {
+            "id": "7",
+            "title": "Autherssdddddd",
+            "image": "http://localhost/task_assignment/uploads/5176591291581.jpg",
+            "created_at": "2022-09-24 00:09:31"
+        },
+        {
+            "id": "8",
+            "title": "Autherssddddddd",
+            "image": "http://localhost/task_assignment/uploads/1282916108304.jpg",
+            "created_at": "2022-09-24 00:10:24"
+        },
+        {
+            "id": "9",
+            "title": "Autherssddddddddd",
+            "image": "http://localhost/task_assignment/uploads/574067737320.jpg",
+            "created_at": "2022-09-24 00:20:56"
+        },
+        {
+            "id": "10",
+            "title": "Autherdssddddddddd",
+            "image": "http://localhost/task_assignment/uploads/660593897766.jpg",
+            "created_at": "2022-09-24 00:21:18"
+        },
+        {
+            "id": "11",
+            "title": "Autherdssddddddddddd",
+            "image": "http://localhost/task_assignment/uploads/4788889888560.jpg",
+            "created_at": "2022-09-24 00:22:00"
+        },
+        {
+            "id": "12",
+            "title": "Autherdssdddddddddddd",
+            "image": "http://localhost/task_assignment/uploads/3213115690875.jpg",
+            "created_at": "2022-09-24 00:23:45"
+        },
+        {
+            "id": "13",
+            "title": "Autherdssddddddddddddd",
+            "image": "http://localhost/task_assignment/uploads/2246352309900.jpg",
+            "created_at": "2022-09-24 00:24:34"
+        },
+        {
+            "id": "14",
+            "title": "Autherdssdddddddddddddd",
+            "image": "http://localhost/task_assignment/uploads/450934454296.jpg",
+            "created_at": "2022-09-24 00:26:16"
+        },
+        {
+            "id": "15",
+            "title": "Autherdssddddddddddddddee",
+            "image": "http://localhost/task_assignment/uploads/347768695241.jpg",
+            "created_at": "2022-09-24 00:30:49"
+        },
+        {
+            "id": "16",
+            "title": "Autherdssddddddddddddddeed",
+            "image": "http://localhost/task_assignment/uploads/5479437071007.jpg",
+            "created_at": "2022-09-24 00:31:39"
+        },
+        {
+            "id": "17",
+            "title": "Autherdssddddddddddddddeedf",
+            "image": "http://localhost/task_assignment/uploads/5552651592092.jpg",
+            "created_at": "2022-09-24 00:31:56"
+        },
+        {
+            "id": "18",
+            "title": "Autherdssddddddddddddddeedfd",
+            "image": "http://localhost/task_assignment/uploads/1609059835158.jpg",
+            "created_at": "2022-09-24 02:07:54"
+        },
+        {
+            "id": "19",
+            "title": "g",
+            "image": "http://localhost/task_assignment/uploads/1474278263472.jpg",
+            "created_at": "2022-09-24 02:09:12"
+        },
+        {
+            "id": "20",
+            "title": "new book",
+            "image": "http://localhost/task_assignment/uploads/4526024835680.jpg",
+            "created_at": "2022-09-24 04:35:19"
+        },
+        {
+            "id": "21",
+            "title": "new bookd",
+            "image": "http://localhost/task_assignment/uploads/4724057182353.jpg",
+            "created_at": "2022-09-24 06:25:27"
+        },
+        {
+            "id": "22",
+            "title": "Book new add",
+            "image": "http://localhost/task_assignment/uploads/3689063754888.jpg",
+            "created_at": "2022-09-24 07:11:04"
+        }
+    ]
+}
+7)getBooksOfCategory Api:
+
+{
+    "status": 200,
+    "message": "Book detail",
+    "data": [
+        {
+            "id": "22",
+            "book_title": "Book new add",
+            "description": "book added successfully",
+            "book_image": "http://localhost/task_assignment/uploads/3689063754888.jpg",
+            "category_id": "3",
+            "category_title": "new categorys",
+            "category_image": "http://localhost/task_assignment/uploads/5223253020812.PNG",
+            "user_id": "15",
+            "username": "testing for assignmentassignment",
+            "user_image": "http://localhost/task_assignment/uploads/4840543416291.jpg",
+            "created_at": "2022-09-24 07:11:04"
+        }
+    ]
+}
+
+8)getBooksOfUser Api:
+{
+    "status": 200,
+    "message": "User Books detail",
+    "data": [
+        {
+            "id": "22",
+            "book_title": "Book new add",
+            "description": "book added successfully",
+            "book_image": "http://localhost/task_assignment/uploads/3689063754888.jpg",
+            "category_id": "3",
+            "category_title": "new categorys",
+            "category_image": "http://localhost/task_assignment/uploads/5223253020812.PNG",
+            "user_id": "15",
+            "username": "testing for assignmentassignment",
+            "user_image": "http://localhost/task_assignment/uploads/4840543416291.jpg",
+            "created_at": "2022-09-24 07:11:04"
+        }
+    ]
+}
