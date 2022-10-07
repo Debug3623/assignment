@@ -457,7 +457,31 @@ class Api_model extends CI_Model
         return $result->row();
     }
     
+        public function get_categories()
+        {
+            $query = $this->db->get('categories');
+            $books=$query->result();
+          //  var_dump($books);die();
+      
+            foreach($books as $category)
+            {
+            
+                $return[$category->id] = $category;
 
+                $return[$category->id]->books = $this->get_sub_categories($category->id); // Get the categories sub categories
+
+            }
+
+            return $return;
+        }
+
+
+        public function get_sub_categories($category_id)
+        {
+            $this->db->where('category_id', $category_id);
+            $query = $this->db->get('books');
+            return $query->result();
+        }
 
     /*
         |---------------------------------------------------------s-------------
@@ -536,17 +560,13 @@ class Api_model extends CI_Model
 
         $newpath = base_url('uploads/');
         $response = array();
-         $fields = "books.id,books.title as book_title,books.description,CONCAT('$newpath','',books.image) as book_image,books.category_id,categories.title as category_title,CONCAT('$newpath','',categories.image) as category_image,books.user_id, CONCAT(users.fname, '', users.lname) as username,CONCAT('$newpath','',users.image) as user_image,books.created_at";
+         $fields = "books.id,books.title as book_title,books.description,CONCAT('$newpath','',books.image) as book_image,books.created_at,books.category_id,categories.title as category_title,CONCAT('$newpath','',categories.image) as category_image";
         $tbls = array(
             array('tbl' => 'categories', 'cond' => 'categories.id = books.category_id', 'type' => 'left'),
-            array('tbl' => 'users', 'cond' => 'users.id = books.user_id', 'type' => 'left'),
 
         );
        
-        // $response["books"] = $this->getSingleRecordWhere($this->tab_books, array('id'=>$data));
          $response = $this->api->selectJoinTablesMultipleRecord("books", $tbls, array("books.user_id" => $data), $fields);
-       
-       
         return $response;
 }
     /*

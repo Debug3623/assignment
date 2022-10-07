@@ -48,32 +48,63 @@ class Auth extends CI_Controller
     {
         extract($_POST);
         //Validating Required Params
-        $this->api->verifyRequiredParams(array("fname", "lname", "address", "dob"));
+        $this->api->verifyRequiredParams(array("fname", "lname", "email", "password","confirmd_password"));
 
         //email test if already exists
-        $get_user = $this->api->getSingleRecordWhere($this->tab_users, array('fname' => $fname));
+        $get_user = $this->api->getSingleRecordWhere($this->tab_users, array('email' => $email));
 
         if (!$get_user) {
 
             $accesstoken = $this->api->generateRandomString();
             $image = $this->uploadImage($_FILES);
-            $userdata = array('fname' => $fname, 'lname' => $lname,'dob' => $dob, 'address' => $address, 'accessToken' => $accesstoken,'image'=>$image);
+
+        if ($_POST['password'] == $_POST['confirmd_password']) {
+            $userdata = array('fname' => $fname, 'lname' => $lname,'email' => $email, 'password' => md5($password), 'accessToken' => $accesstoken);
          
             $user_id = $this->api->insertGetId($this->tab_users, $userdata);
             $insert_id = $this->db->insert_id();
-               $userdataDevice = array('user_id'=>$user_id,'mac_address'=>$mac_address,'device_type'=>$device_type,'device_id'=>$device_id);
-
-            $this->api->insertGetId($this->tab_devices, $userdataDevice);
+             
             $user = $this->auth->getUserProfile($user_id);
             $this->api->successResponseWithData('Registration Successfully', $user);
+                }
+                else
+                {
+                 $this->api->print_error('Password does not matched');
 
+                }
+         } 
+         else {
+
+            $this->api->print_error('Email Already Exist');
+
+        }
+    }
+
+     /*
+     |----------------------------------------------------------------------
+     | FUNCTION @Login FOR LOGGING USER IN
+     |----------------------------------------------------------------------
+     */
+    public function Login()
+    {
+        $this->checkRequest();
+        extract($_POST);
+        $this->api->verifyRequiredParams(array("email", "password"));
+
+        $user = $this->api->getSingleRecordWhere($this->tab_users, array('email' => $email, 'password' => md5($password)));
+
+        if (empty($user) || count([$user]) <= 0) {
+            $this->api->print_error("Invalid Credentials");
         } else {
-
-            $this->api->print_error('First Name Already Exist');
+            unset($user->password);
+            unset($user->created_at);
+            $profile = $this->auth->getUser($user->id);
+            $this->api->successResponseWithData("Login Successfully", $profile);
 
         }
     }
   
+
     private function uploadImage()
     {
         $image = '';
@@ -91,6 +122,55 @@ class Auth extends CI_Controller
     }
 
 
+
+    /*
+ |----------------------------------------------------------------------
+ | FUNCTION @updateProfileImage 
+ |----------------------------------------------------------------------
+ */
+
+
+    public function updateProfileImage()
+    {
+        $user_id = $this->api->validateApiKey();
+        extract($_POST);
+        $response = array();
+        //$this->verifyRequiredParams(array("brand_logo"));
+        unset($_POST['id']);
+
+        $user = $this->api->getSingleRecordWhere($this->tab_users, array('id' => $user_id));
+
+
+        // upload user picture
+        $image = $this->uploadImages($_FILES);
+        $is_updated = $this->api->updateData($this->tab_users, array('image' => $image), array('id' => $user_id));
+        if (!empty($is_updated) || !empty($image)) {
+            $this->api->successResponse("Image Successfully updated");
+
+        } else {
+
+            $this->api->print_r('Image does not updated.');
+        }
+
+        exit;
+    }
+
+
+     private function uploadImages()
+    {
+        $image = '';
+
+        if (isset($_FILES['image']['name'])) {
+            $info = pathinfo($_FILES['image']['name']);
+            $ext = $info['extension'];
+            $newname = rand(5, 3456) * date(time()) . "." . $ext;
+            $target = 'uploads/' . $newname;
+            if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+                $image = $newname;
+            }
+        }
+        return $image;
+    }
 
 
     /*

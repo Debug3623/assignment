@@ -95,7 +95,7 @@ class Categories extends CI_Controller
         //$response = array();
            $newpath = base_url('uploads/');
 
-           $query = "SELECT id,title,CONCAT('$newpath','',image) as image,created_at,created_by
+           $query = "SELECT id as category_id,title,CONCAT('$newpath','',image) as image,created_at,created_by
             FROM categories" ;
             $allCategories = $this->db->query($query)->result();
              if (empty($allCategories)) {

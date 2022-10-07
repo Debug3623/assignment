@@ -41,8 +41,8 @@ class Auth_model extends CI_Model
     public function getUserProfile($id)
     {
         $newpath = base_url('uploads/');
-        $fields= "users.id,users.fname,users.lname,users.dob,users.address,concat('$newpath',users.image) as image,accessToken,users.created_at,";
-        $field= "devices.id,devices.mac_address,devices.device_type,devices.device_id";
+        $fields= "users.id,users.fname,users.lname,users.email,users.password,concat('$newpath',users.image) as image,accessToken,users.created_at,";
+      ;
         //$user=array();
         $user= $this->api->getSingleRecordWhere('users',array('id'=>$id),$fields);
 
@@ -56,11 +56,11 @@ class Auth_model extends CI_Model
 
     }
 
-      public function getSupplier($userId)
+      public function getUser($userId)
     {
         $newpath = base_url('uploads/');
-        $feilds = "id,name,email,password,brand_name,CONCAT('$newpath','/',image) as image";
-        $data = $this->api->getSingleRecordWhere('users', array('id' => $userId, 'user_type' => 1), $feilds);
+        $feilds = "id,fname,lname,email,password,CONCAT('$newpath','/',image) as image";
+        $data = $this->api->getSingleRecordWhere('users', array('id' => $userId), $feilds);
         if (!empty($data)) {
             return $data;
         } else

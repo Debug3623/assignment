@@ -57,7 +57,8 @@ $route['default_controller'] = 'auth';
 |----------------------------------------------------------------------
 */
 $route['auth/signup'] = 'auth/signup';
-$route['auth/login'] = 'auth/supplierLogin';
+$route['auth/login'] = 'auth/Login';
+$route['auth/profile/update'] = 'auth/updateProfileImage';
 $route['auth/social/login'] = 'auth/socialLogin';
 $route['auth/password/forgot'] = 'auth/forgotPassword';
 $route['auth/password/verifycode'] = 'auth/verifyPasswordCode';
@@ -93,6 +94,8 @@ $route['customer/getcustomers'] = 'customer/getcustomers';
 */
 $route['books'] = 'books/getBooks';
 $route['books/add'] = 'books/addBooks';
+$route['books/getAll'] = 'books/getBooksAll';
+
 $route['products/update'] = 'products/updateProduct';
 $route['books/book'] = 'books/getSingleBook';
 $route['products/delete'] = 'products/deleteProduct';

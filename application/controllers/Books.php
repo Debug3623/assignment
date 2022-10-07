@@ -5,6 +5,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Books extends CI_Controller
 {
     public $tab_users='users';
+    public $tab_pdf='pdf_books';
     public $tab_devices='devices';
     public $tab_books='books';
 
@@ -60,15 +61,15 @@ class Books extends CI_Controller
           $this->api->print_error('Books already exists.');
         }
         $image = $this->uploadImage($_FILES);
-        $insertData = $this->api->insertData($this->tab_books, array('title' => $title,'user_id'=>$user_id,'description'=>$description,'category_id'=>$category_id,'image'=>$image)); 
+        $insertData = $this->api->insertData($this->tab_books, array('title' => $title,'user_id'=>$user_id,'description'=>$description,'category_id'=>$category_id,'image'=>$image));
+
         $inserted_id = $this->db->insert_id($insertData);
+       $pdf = $this->uploadFile($_FILES);
+        $insertPdf = $this->api->insertData($this->tab_pdf, array('book_id' => $inserted_id,'filename'=>$pdf,'user_id'=>$user_id));
 
         if ($insertData) {
-              $newpath = base_url('uploads/');
-            $user = $this->api->getSingleRecordWhere($this->tab_books,array('id' => $inserted_id),"id,title,description,user_id,category_id,CONCAT('$newpath','',image) as image");
-
-
-            $this->api->successResponseWithData("Book Successfully added.", $user);
+       
+            $this->api->successResponse("Book Successfully added.");
 
         } else {
         
@@ -79,6 +80,27 @@ class Books extends CI_Controller
 
 
     /*
+|----------------------------------------------------------------------
+| FUNCTION @upload File
+|----------------------------------------------------------------------
+*/
+
+    private function uploadFile($data)
+    {
+        $image = '';
+        if ($data) {
+            $info = pathinfo($_FILES['filename']['name']);
+            $ext = $info['extension'];
+            $newname = $_FILES['filename']['name'];
+            $target = 'uploads/pdf' . $newname;
+            if (move_uploaded_file($_FILES['filename']['tmp_name'], $target)) {
+                $image = $newname;
+            }
+        }
+        return $image;
+    }
+
+    /*
     |----------------------------------------------------------------------
     | FUNCTION @getBooks get All Books
     |----------------------------------------------------------------------
@@ -86,29 +108,22 @@ class Books extends CI_Controller
 
     public function getBooks()
     {
+        $categories[] = $this->api->get_categories();
 
-     $user_id = $this->api->validateApiKey();
-        //$response = array();
-           $newpath = base_url('uploads/');
+       // var_dump(  $categories); die();
 
-           $query = "SELECT id,title,CONCAT('$newpath','',image) as image,created_at
-            FROM $this->tab_books" ;
-            $allCategories = $this->db->query($query)->result();
-             if (empty($allCategories)) {
-            $categories="No categories Exist";
-            }else{
-             $categories =  $allCategories;
-             }
-
-   
         if (!empty($categories)) {
-                $this->api->successResponseWithData('All Books', $categories);
+              $this->api->successResponseWithData('All Books', $categories);
+  
         } else {  
              $this->api->print_error('Category is not exist', $categories);
 
          }
 
     }
+
+
+
 
    /*
     |----------------------------------------------------------------------
